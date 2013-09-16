@@ -60,10 +60,22 @@ public class Field {
         int ordY = 0;
 
         Scanner s = new Scanner(System.in);
-        ordX = s.nextInt();
-        ordY = s.nextInt();//считывание двух интов
+        for (;;) {
 
-        field[ordX][ordY] = inputSymbol;
+            ordX = s.nextInt();
+            ordY = s.nextInt();//считывание двух интов
+
+            if (field[ordX][ordY] == ' ') {
+                field[ordX][ordY] = inputSymbol;
+                break;
+            }
+            else {
+                System.out.println("Enter the other coordinates, these are busy");
+            }
+
+        }
+
+
     }
 
 
