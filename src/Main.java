@@ -20,10 +20,11 @@ public class Main {
                 System.out.println("Gamer " + currentSymbol + " WIN!!!");
                 field.showField();
                 break;
-
             }
 
             if (i == 8) {
+                System.out.println();
+                field.showField();
                 System.out.println("Draw! Try again ;)");
                 break;
             }
