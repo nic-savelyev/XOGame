@@ -16,8 +16,12 @@ public class Main {
             field.showField();
 
             field.characterInput(currentSymbol);
-            field.checkWin(currentSymbol);
+            if (field.checkWin(currentSymbol) != 0) {
+                System.out.println("Gamer " + currentSymbol + " WIN!!!");
+                field.showField();
+                break;
 
+            }
 
         }
 

@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Field {
 
@@ -53,11 +54,16 @@ public class Field {
     }
 
     public void characterInput(char inputSymbol) {
-        System.out.println(inputSymbol + " Please enter the XY coordinates ");
+        System.out.println(inputSymbol + " gamer, please enter the XY coordinates ");
 
-        //считывание двух интов
+        int ordX = 0;
+        int ordY = 0;
 
-        //field[x][y] = inputSymbol;
+        Scanner s = new Scanner(System.in);
+        ordX = s.nextInt();
+        ordY = s.nextInt();//считывание двух интов
+
+        field[ordX][ordY] = inputSymbol;
     }
 
 
@@ -68,6 +74,9 @@ public class Field {
     }
 
     public void showField() {
+        System.out.println();
+
+        showColumnNumbers();
         System.out.println();
         for (int i = 0; i < FIELD_SIZE; i++) {
             showLine(i);
@@ -82,8 +91,16 @@ public class Field {
     }
 
     private void showLine(int lineNumber) {
+        System.out.print(" " + lineNumber + " ");
         for (int i = 0; i < FIELD_SIZE; i++) {
             showCell(i, lineNumber);
+        }
+    }
+
+    private void showColumnNumbers() {
+        System.out.print("   ");
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            System.out.print(" " + i + " ");
         }
     }
 
