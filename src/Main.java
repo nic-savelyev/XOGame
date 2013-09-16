@@ -6,7 +6,7 @@ public class Main {
         field.eraseField();
         char currentSymbol = ' ';
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             if ((i == 0) || (i % 2 == 0)) {                 //Change player moves
                 currentSymbol = 'X';
             }
@@ -23,7 +23,12 @@ public class Main {
 
             }
 
+            if (i == 8) {
+                System.out.println("Draw! Try again ;)");
+                break;
+            }
         }
+
 
     }
 }

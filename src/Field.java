@@ -49,7 +49,6 @@ public class Field {
         if (winScore == 3) {
             return inputSymbol;
         }
-
         return 0;
     }
 
@@ -72,12 +71,8 @@ public class Field {
             else {
                 System.out.println("Enter the other coordinates, these are busy");
             }
-
         }
-
-
     }
-
 
     public void eraseField() {
         for (int i = 0; i < FIELD_SIZE; i++) {
