@@ -25,6 +25,19 @@ public class Field {
             }
         }
 
+        for (int i = 0; i < 3; i++) {               //Checking the horizontal lines
+            winScore = 0;
+            for (int j = 0; j < 3; j++) {
+                if (field[j][i] == inputSymbol){
+                    winScore++;
+                }
+            }
+
+            if (winScore == 3) {
+                return inputSymbol;
+            }
+        }
+
         winScore = 0;
         for (int i = 0; i < 3; i++) {               //Checking the main diagonal
             if (field[i][i] == inputSymbol){
